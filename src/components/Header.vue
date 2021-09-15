@@ -8,9 +8,9 @@
         v-model="searchText"
         @keydown.enter="sendSearchText"
       />
-      <a href="#" class="btn" @click="sendSearchText">
-        <img src="../../images/icon-arrow.svg" />
-      </a>
+      <button class="btn" @click="sendSearchText">
+        <img alt="Search Icon" src="../../images/icon-arrow.svg" />
+      </button>
       <!--<button class="btn btn-dark" @click="sendSearchText">
         <img src="../../images/icon-arrow.svg" />
       </button>-->
@@ -62,7 +62,7 @@ export default {
       padding: 19px 20px;
       border-radius: 0 16px 16px 0;
       position: absolute;
-      top: 25px;
+      top: 22px;
       right: 0px;
       display: flex;
       justify-content: center;

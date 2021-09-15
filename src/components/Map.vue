@@ -10,7 +10,11 @@
         :lat-lng="[results.location.lat, results.location.lng]"
       ></l-marker>
     </l-map>
-    <img class="tracker-map-icon" src="../../images/icon-location.svg" />
+    <img
+      class="tracker-map-icon"
+      alt="Tracker Map Icon"
+      src="../../images/icon-location.svg"
+    />
   </div>
 </template>
 
