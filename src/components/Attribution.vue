@@ -9,8 +9,10 @@
 
 <style lang="scss" scoped>
 .attribution {
+  position: fixed;
+  bottom: 10px;
   font-size: 1.4rem;
-  padding: 10px;
+  width: 100%;
   text-align: center;
   & a {
     color: hsl(228, 45%, 44%);

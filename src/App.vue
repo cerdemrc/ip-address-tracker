@@ -4,7 +4,7 @@
       <Header @search-text="getInfos($event)" />
       <Results :results="results" :isError="isError" />
     </div>
-    <Map />
+    <Map :results="results" />
     <Attribution />
   </div>
 </template>
@@ -37,6 +37,7 @@ export default {
           `https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${searchText}`
         )
         .then((res) => {
+          console.log(res.data);
           this.results = res.data;
           this.isError = false;
         })
