@@ -1,35 +1,57 @@
 <template>
-  <div class="tracker-results">
-    <div class="tracker-results-box">
-      <h1 class="results-title">IP ADDRESS</h1>
-      <h2 class="main-title results-subtitle">192.212.174.101</h2>
+  <div class="tracker-results-wrapper">
+    <div class="tracker-results" v-if="results">
+      <div class="tracker-results-box">
+        <h1 class="results-title">IP ADDRESS</h1>
+        <h2 class="main-title results-subtitle">{{ results.ip }}</h2>
+      </div>
+      <div class="results-border" />
+      <div class="tracker-results-box">
+        <h1 class="results-title">LOCATION</h1>
+        <h2 class="main-title results-subtitle">
+          {{ results.location.city }}, {{ results.location.country }}
+          {{ results.location.postalCode }}
+        </h2>
+      </div>
+      <div class="results-border" />
+      <div class="tracker-results-box">
+        <h1 class="results-title">TIMEZONE</h1>
+        <h2 class="main-title results-subtitle">
+          UTC {{ results.location.timezone }}
+        </h2>
+      </div>
+      <div class="results-border" />
+      <div class="tracker-results-box">
+        <h1 class="results-title">ISP</h1>
+        <h2 class="main-title results-subtitle">{{ results.isp }}</h2>
+      </div>
     </div>
-    <div class="results-border" />
-    <div class="tracker-results-box">
-      <h1 class="results-title">LOCATION</h1>
-      <h2 class="main-title results-subtitle">Brooklyn, NY 10001</h2>
-    </div>
-    <div class="results-border" />
-    <div class="tracker-results-box">
-      <h1 class="results-title">TIMEZONE</h1>
-      <h2 class="main-title results-subtitle">UTC -05:00</h2>
-    </div>
-    <div class="results-border" />
-    <div class="tracker-results-box">
-      <h1 class="results-title">ISP</h1>
-      <h2 class="main-title results-subtitle">SpaceX Starlink</h2>
+    <div class="tracker-fail-result" v-if="isError">
+      <h1>No results found for this ip address.</h1>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    results: {
+      Object,
+    },
+    isError: {
+      Boolean,
+    },
+  },
+};
 </script>
 
 <style lang="scss">
 @import "../assets/style/_common.scss";
 @import "../assets/style/colors.scss";
 
+.tracker-results-wrapper {
+  position: relative;
+}
 .tracker-results {
   background: $white;
   display: flex;
@@ -38,6 +60,8 @@ export default {};
   padding: 3rem 0;
   border-radius: 15px;
   margin-top: 3rem;
+  position: absolute;
+  left: 8%;
   &-box {
     display: flex;
     flex-direction: column;
@@ -62,6 +86,21 @@ export default {};
     width: 1px;
     height: 80px;
     background: $lightGray;
+  }
+}
+
+.tracker-fail-result {
+  background: $white;
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px 0;
+  border-radius: 20px;
+  position: absolute;
+  width: 100%;
+  & h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: $darkGray;
   }
 }
 </style>

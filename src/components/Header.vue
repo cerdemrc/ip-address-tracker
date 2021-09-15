@@ -1,15 +1,31 @@
 <template>
   <div class="tracker-header">
     <h1 class="tracker-header-title main-title">IP Adress Tracker</h1>
-    <input type="text" placeholder="Search for any IP address or domain" />
-    <button class="btn btn-dark">
+    <input
+      type="text"
+      placeholder="Search for any IP address or domain"
+      v-model="searchText"
+    />
+    <button class="btn btn-dark" @click="sendSearchText">
       <img src="../../images/icon-arrow.svg" />
     </button>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      searchText: "",
+    };
+  },
+  methods: {
+    sendSearchText() {
+      this.$emit("search-text", this.searchText);
+      this.searchText = "";
+    },
+  },
+};
 </script>
 
 <style lang="scss">
