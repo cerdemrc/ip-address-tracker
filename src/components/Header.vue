@@ -5,6 +5,7 @@
       type="text"
       placeholder="Search for any IP address or domain"
       v-model="searchText"
+      @keydown.enter="sendSearchText"
     />
     <button class="btn btn-dark" @click="sendSearchText">
       <img src="../../images/icon-arrow.svg" />
