@@ -2,16 +2,19 @@
   <div class="tracker-main">
     <div class="container">
       <Header />
+      <Results />
     </div>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
+import Results from "./components/Results.vue";
 export default {
   name: "App",
   components: {
     Header,
+    Results,
   },
 };
 </script>
@@ -26,3 +29,4 @@ export default {
   height: 27rem;
 }
 </style>
+
