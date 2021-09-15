@@ -1,4 +1,8 @@
-# ip-address-tracker-master
+# 🚀 IP Address Tracker
+
+#### This is a solution to the IP address tracker challenge on Frontend Mentor. 
+<strong>Used Techs:</strong> Vue js, SCSS, Axios, LeafletJS, LeIP Geolocation API
+#### [Live Demo](https://ip-address-tracker-vue.vercel.app/)
 
 ## Project setup
 ```
