@@ -1,6 +1,6 @@
 <template>
   <div class="tracker-results-wrapper">
-    <div class="tracker-results" v-if="results">
+    <div class="tracker-results result-bg" v-if="results">
       <div class="tracker-results-box">
         <h1 class="results-title">IP ADDRESS</h1>
         <h2 class="main-title results-subtitle">{{ results.ip }}</h2>
@@ -26,7 +26,7 @@
         <h2 class="main-title results-subtitle">{{ results.isp }}</h2>
       </div>
     </div>
-    <div class="tracker-fail-result" v-if="isError">
+    <div class="tracker-fail-result result-bg" v-if="isError">
       <h1>No results found for this ip address.</h1>
     </div>
   </div>
@@ -51,17 +51,14 @@ export default {
 
 .tracker-results-wrapper {
   position: relative;
+  z-index: 99;
 }
 .tracker-results {
-  background: $white;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 3rem 0;
-  border-radius: 15px;
   margin-top: 3rem;
-  position: absolute;
-  left: 8%;
+  padding: 30px 0;
   &-box {
     display: flex;
     flex-direction: column;
@@ -90,13 +87,9 @@ export default {
 }
 
 .tracker-fail-result {
-  background: $white;
   text-align: center;
   margin-top: 50px;
   padding: 20px 0;
-  border-radius: 20px;
-  position: absolute;
-  width: 100%;
   & h1 {
     font-size: 2rem;
     font-weight: 500;
