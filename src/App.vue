@@ -5,6 +5,7 @@
       <Results :results="results" :isError="isError" />
     </div>
     <Map />
+    <Attribution />
   </div>
 </template>
 
@@ -12,6 +13,7 @@
 import Header from "./components/Header.vue";
 import Results from "./components/Results.vue";
 import Map from "./components/Map.vue";
+import Attribution from "./components/Attribution.vue";
 import axios from "axios";
 export default {
   name: "App",
@@ -19,6 +21,7 @@ export default {
     Header,
     Results,
     Map,
+    Attribution,
   },
   data() {
     return {
