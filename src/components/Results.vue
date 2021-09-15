@@ -96,4 +96,33 @@ export default {
     color: $darkGray;
   }
 }
+@media screen and (max-width: 1020px) {
+  .tracker-results {
+    &-box {
+      padding: 0 20px;
+      width: 50%;
+    }
+    & .results-border {
+      height: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 778px) {
+  .tracker-results {
+    &-box {
+      padding: 0 20px;
+      width: 50%;
+      & .results-title {
+        font-size: 0.8rem;
+      }
+      & .results-subtitle {
+        font-size: 1.3rem;
+      }
+    }
+    & .results-border {
+      height: 50px;
+    }
+  }
+}
 </style>

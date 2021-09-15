@@ -23,8 +23,17 @@
     width: 50px;
     height: auto;
     position: absolute;
-    left: 70rem;
-    top: 25rem;
+    left: 40%;
+    top: 50%;
   }
+}
+
+@media screen and (max-width: 610px) {
+  //  .tracker-map {
+  //    & img {
+  //      left: 70rem;
+  //      top: 25rem;
+  //    }
+  //  }
 }
 </style>
