@@ -46,9 +46,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/style/_common.scss";
-@import "../assets/style/colors.scss";
-
 .tracker-results-wrapper {
   position: relative;
   z-index: 99;

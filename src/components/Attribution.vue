@@ -15,7 +15,7 @@
   width: 100%;
   text-align: center;
   & a {
-    color: hsl(228, 45%, 44%);
+    color: $blue;
   }
 }
 </style>

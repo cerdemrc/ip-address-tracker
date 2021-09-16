@@ -51,8 +51,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./assets/style/_common.scss";
-@import "./assets/style/colors.scss";
 .tracker-main {
   background: url(../images/pattern-bg.png) no-repeat;
   background-size: cover;

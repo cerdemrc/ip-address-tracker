@@ -11,9 +11,6 @@
       <button class="btn" @click="sendSearchText">
         <img alt="Search Icon" src="../../images/icon-arrow.svg" />
       </button>
-      <!--<button class="btn btn-dark" @click="sendSearchText">
-        <img src="../../images/icon-arrow.svg" />
-      </button>-->
     </div>
   </div>
 </template>
@@ -35,8 +32,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/style/_common.scss";
-@import "../assets/style/colors.scss";
 .tracker-header {
   display: flex;
   flex-direction: column;
@@ -58,7 +53,7 @@ export default {
       }
     }
     & .btn {
-      background: #000;
+      background: $black;
       padding: 19px 20px;
       border-radius: 0 16px 16px 0;
       position: absolute;
